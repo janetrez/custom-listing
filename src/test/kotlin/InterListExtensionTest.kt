@@ -98,4 +98,21 @@ class InterListExtensionTest {
         assertEquals(4,maximum)
     }
 
+    @Test
+    fun `should get n repeating values of the list`() {
+        val list1 = BaseNodeList<Int>()
+        list1.add(1)
+        list1.add(3)
+
+        val expected = BaseNodeList<Int>()
+        expected.add(1)
+        expected.add(3)
+        expected.add(3)
+        expected.add(3)
+        
+        val result = list1.getRepeatingN()
+
+        assertTrue { result.equals(expected.getList()) }
+    }
+
 }

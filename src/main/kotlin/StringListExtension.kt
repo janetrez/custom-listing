@@ -72,3 +72,14 @@ fun BaseNodeList<String>.getFirstLetterWord(): String {
     return str
 }
 
+fun BaseNodeList<String>.getWords(): BaseNodeList<String> {
+    val list = BaseNodeList<String>()
+    var temp = this.getList().head
+    while (temp != null) {
+        for (i in temp.value.split(" "))
+            list.add(i)
+        temp = temp.next
+    }
+    return list
+}
+

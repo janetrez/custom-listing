@@ -74,3 +74,14 @@ fun BaseNodeList<Int>.getMax(): Int {
     }
     return max
 }
+
+fun BaseNodeList<Int>.getRepeatingN(): BaseNodeList<Int> {
+    val list = BaseNodeList<Int>()
+    var temp = this.head
+    while (temp != null) {
+        for(i in 1..temp.value)
+            list.add(temp.value)
+        temp = temp.next
+    }
+    return list
+}

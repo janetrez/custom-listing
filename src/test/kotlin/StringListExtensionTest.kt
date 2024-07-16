@@ -95,5 +95,22 @@ class StringListExtensionTest {
 
     }
 
+    @Test
+    fun `should get the words from the strings `() {
+        val list1 = BaseNodeList<String>()
+        list1.add("hello how")
+        list1.add("are you")
+        val list2 = BaseNodeList<String>()
+        list2.add("hello")
+        list2.add("how")
+        list2.add("are")
+        list2.add("you")
+
+        val result = list1.getWords()
+
+        assertTrue{ result.equals(list2) }
+
+    }
+
 
 }
