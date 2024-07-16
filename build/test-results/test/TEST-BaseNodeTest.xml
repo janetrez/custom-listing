@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="BaseNodeTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-07-16T14:35:22" hostname="Treasas-MacBook-Pro.local" time="0.012">
+  <properties/>
+  <testcase name="should create a node with given string value()" classname="BaseNodeTest" time="0.012"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
