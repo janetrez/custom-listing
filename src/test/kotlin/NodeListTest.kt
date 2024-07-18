@@ -31,4 +31,18 @@ class NodeListTest {
         assertEquals(2, list1.getSize())
     }
 
+    @Test
+    fun `should delete n integers from the list`(){
+        val list = BaseNodeList<Int>()
+        list.add(2)
+        list.add(3)
+        list.add(4)
+        val expected = BaseNodeList<Int>()
+        expected.add(2)
+
+        list.drop(2)
+
+        assertTrue { expected.equals(list) }
+    }
+
 }

@@ -48,6 +48,14 @@ class BaseNodeList<T> {
         return true
     }
 
+    fun drop(count : Int){
+        if(this.getSize() < count)
+            throw Exception("Count greater than list size")
+        for ( i in 1..count) {
+            this.head = this.head?.next
+        }
+    }
+
 }
 
 

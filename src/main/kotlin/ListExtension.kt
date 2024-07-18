@@ -33,3 +33,4 @@ fun <T, R> BaseNodeList<T>.fold(initial: R, fn: (R, T) -> R): R {
     }
     return result
 }
+
