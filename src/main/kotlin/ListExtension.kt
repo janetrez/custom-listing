@@ -34,3 +34,14 @@ fun <T, R> BaseNodeList<T>.fold(initial: R, fn: (R, T) -> R): R {
     return result
 }
 
+fun <T> BaseNodeList<T>.dropWhile(fn: (T) -> Boolean){
+    val result = BaseNodeList<T>()
+    val list = this.getList()
+    var temp = list.head
+    while (temp != null) {
+        if (!fn(temp.value))
+            result.add(temp.value)
+        temp = temp.next
+    }
+    this.head = result.head
+}

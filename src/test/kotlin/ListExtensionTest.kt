@@ -1,7 +1,4 @@
-import org.example.BaseNodeList
-import org.example.filter
-import org.example.fold
-import org.example.map
+import org.example.*
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue
@@ -112,5 +109,19 @@ class ListExtensionTest {
         assertEquals("hello world ",result)
     }
 
+    @Test
+    fun `should delete even integers from the list`(){
+        val list = BaseNodeList<Int>()
+        list.add(2)
+        list.add(3)
+        list.add(4)
+        val expected = BaseNodeList<Int>()
+        expected.add(3)
 
+        list.dropWhile {
+            it % 2 == 0
+        }
+
+        assertTrue { expected.equals(list) }
+    }
 }
