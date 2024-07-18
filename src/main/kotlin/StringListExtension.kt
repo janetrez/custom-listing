@@ -1,6 +1,5 @@
 package org.example
 
-
 fun BaseNodeList<String>.getUpper(): BaseNodeList<String> {
     val list = BaseNodeList<String>()
     var temp = this.head

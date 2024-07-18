@@ -109,7 +109,7 @@ class InterListExtensionTest {
         expected.add(3)
         expected.add(3)
         expected.add(3)
-        
+
         val result = list1.getRepeatingN()
 
         assertTrue { result.equals(expected.getList()) }

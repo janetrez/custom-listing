@@ -1,5 +1,6 @@
 import org.example.BaseNodeList
 import org.example.getSquare
+import org.example.map
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue
@@ -29,6 +30,5 @@ class NodeListTest {
 
         assertEquals(2, list1.getSize())
     }
-
 
 }
