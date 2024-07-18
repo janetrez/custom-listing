@@ -24,7 +24,7 @@ fun BaseNodeList<String>.get3LetterStrings(): BaseNodeList<String> {
     val list = BaseNodeList<String>()
     var temp = this.head
     while (temp != null) {
-        if(temp.value.length == 3)
+        if (temp.value.length == 3)
             list.add(temp.value)
         temp = temp.next
     }
@@ -35,7 +35,7 @@ fun BaseNodeList<String>.getStringLengths(): BaseNodeList<Int> {
     val list = BaseNodeList<Int>()
     var temp = this.head
     while (temp != null) {
-            list.add(temp.value.length)
+        list.add(temp.value.length)
         temp = temp.next
     }
     return list

@@ -71,7 +71,7 @@ class InterListExtensionTest {
 
         val sum = list1.getSum()
 
-        assertEquals(6,sum)
+        assertEquals(6, sum)
     }
 
     @Test
@@ -83,7 +83,7 @@ class InterListExtensionTest {
 
         val minimum = list1.getMin()
 
-        assertEquals(2,minimum)
+        assertEquals(2, minimum)
     }
 
     @Test
@@ -95,7 +95,7 @@ class InterListExtensionTest {
 
         val maximum = list1.getMax()
 
-        assertEquals(4,maximum)
+        assertEquals(4, maximum)
     }
 
     @Test

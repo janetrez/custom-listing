@@ -8,7 +8,7 @@ import kotlin.test.assertTrue
 class NodeListTest {
 
     @Test
-    fun `should create a list of integers`(){
+    fun `should create a list of integers`() {
         val list1 = BaseNodeList<Int>()
         list1.add(1)
         list1.add(2)
@@ -23,7 +23,7 @@ class NodeListTest {
     }
 
     @Test
-    fun `should get the size of a list`(){
+    fun `should get the size of a list`() {
         val list1 = BaseNodeList<Int>()
         list1.add(1)
         list1.add(2)
@@ -32,7 +32,7 @@ class NodeListTest {
     }
 
     @Test
-    fun `should delete n integers from the list`(){
+    fun `should delete n integers from the list`() {
         val list = BaseNodeList<Int>()
         list.add(2)
         list.add(3)
@@ -49,7 +49,7 @@ class NodeListTest {
     }
 
     @Test
-    fun `should get n integers from the list`(){
+    fun `should get n integers from the list`() {
         val list = BaseNodeList<Int>()
         list.add(2)
         list.add(3)

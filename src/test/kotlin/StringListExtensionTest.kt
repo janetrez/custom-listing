@@ -108,7 +108,7 @@ class StringListExtensionTest {
 
         val result = list1.getWords()
 
-        assertTrue{ result.equals(list2) }
+        assertTrue { result.equals(list2) }
 
     }
 

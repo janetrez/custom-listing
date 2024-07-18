@@ -28,13 +28,13 @@ fun <T, R> BaseNodeList<T>.fold(initial: R, fn: (R, T) -> R): R {
     val list = this.getList()
     var temp = list.head
     while (temp != null) {
-        result = fn(result,temp.value)
+        result = fn(result, temp.value)
         temp = temp.next
     }
     return result
 }
 
-fun <T> BaseNodeList<T>.dropWhile(fn: (T) -> Boolean){
+fun <T> BaseNodeList<T>.dropWhile(fn: (T) -> Boolean) {
     val result = BaseNodeList<T>()
     val list = this.getList()
     var temp = list.head
@@ -46,7 +46,7 @@ fun <T> BaseNodeList<T>.dropWhile(fn: (T) -> Boolean){
     this.head = result.head
 }
 
-fun <T> BaseNodeList<T>.takeWhile(fn: (T) -> Boolean){
+fun <T> BaseNodeList<T>.takeWhile(fn: (T) -> Boolean) {
     val result = BaseNodeList<T>()
     val list = this.getList()
     var temp = list.head
@@ -58,7 +58,7 @@ fun <T> BaseNodeList<T>.takeWhile(fn: (T) -> Boolean){
     this.head = result.head
 }
 
-fun <T> BaseNodeList<T>.exists(fn: (T) -> Boolean) : Boolean{
+fun <T> BaseNodeList<T>.exists(fn: (T) -> Boolean): Boolean {
     var temp = this.head
     while (temp != null) {
         if (fn(temp.value))
@@ -68,7 +68,7 @@ fun <T> BaseNodeList<T>.exists(fn: (T) -> Boolean) : Boolean{
     return false
 }
 
-fun <T> BaseNodeList<T>.forAll(fn: (T) -> Boolean) : Boolean{
+fun <T> BaseNodeList<T>.forAll(fn: (T) -> Boolean): Boolean {
     var temp = this.head
     while (temp != null) {
         if (!fn(temp.value))

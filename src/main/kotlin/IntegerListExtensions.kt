@@ -25,8 +25,8 @@ fun BaseNodeList<Int>.getOdd(): BaseNodeList<Int> {
     val list = BaseNodeList<Int>()
     var temp = this.head
     while (temp != null) {
-        if(temp.value % 2 !=0)
-        list.add(temp.value)
+        if (temp.value % 2 != 0)
+            list.add(temp.value)
         temp = temp.next
     }
     return list
@@ -36,7 +36,7 @@ fun BaseNodeList<Int>.getEven(): BaseNodeList<Int> {
     val list = BaseNodeList<Int>()
     var temp = this.head
     while (temp != null) {
-        if(temp.value % 2 ==0)
+        if (temp.value % 2 == 0)
             list.add(temp.value)
         temp = temp.next
     }
@@ -57,7 +57,7 @@ fun BaseNodeList<Int>.getMin(): Int {
     var min = Int.MAX_VALUE
     var temp = this.head
     while (temp != null) {
-        if(temp.value < min)
+        if (temp.value < min)
             min = temp.value
         temp = temp.next
     }
@@ -68,7 +68,7 @@ fun BaseNodeList<Int>.getMax(): Int {
     var max = Int.MIN_VALUE
     var temp = this.head
     while (temp != null) {
-        if(temp.value > max)
+        if (temp.value > max)
             max = temp.value
         temp = temp.next
     }
@@ -79,7 +79,7 @@ fun BaseNodeList<Int>.getRepeatingN(): BaseNodeList<Int> {
     val list = BaseNodeList<Int>()
     var temp = this.head
     while (temp != null) {
-        for(i in 1..temp.value)
+        for (i in 1..temp.value)
             list.add(temp.value)
         temp = temp.next
     }

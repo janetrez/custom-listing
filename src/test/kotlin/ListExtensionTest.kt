@@ -150,9 +150,11 @@ class ListExtensionTest {
         list.add(3)
         list.add(4)
 
-        assertTrue { list.exists{
-            it % 2 == 0
-        } }
+        assertTrue {
+            list.exists {
+                it % 2 == 0
+            }
+        }
     }
 
     @Test
@@ -162,9 +164,11 @@ class ListExtensionTest {
         list.add(3)
         list.add(5)
 
-        assertFalse { list.exists{
-            it % 2 == 0
-        } }
+        assertFalse {
+            list.exists {
+                it % 2 == 0
+            }
+        }
     }
 
     @Test
@@ -174,9 +178,11 @@ class ListExtensionTest {
         list.add(2)
         list.add(5)
 
-        assertFalse { list.forAll{
-            it % 2 != 0
-        } }
+        assertFalse {
+            list.forAll {
+                it % 2 != 0
+            }
+        }
     }
 
     @Test
@@ -186,8 +192,10 @@ class ListExtensionTest {
         list.add(2)
         list.add(6)
 
-        assertTrue { list.forAll{
-            it % 2 == 0
-        } }
+        assertTrue {
+            list.forAll {
+                it % 2 == 0
+            }
+        }
     }
 }
