@@ -57,3 +57,13 @@ fun <T> BaseNodeList<T>.takeWhile(fn: (T) -> Boolean){
     }
     this.head = result.head
 }
+
+fun <T> BaseNodeList<T>.exists(fn: (T) -> Boolean) : Boolean{
+    var temp = this.head
+    while (temp != null) {
+        if (fn(temp.value))
+            return true
+        temp = temp.next
+    }
+    return false
+}

@@ -1,6 +1,7 @@
 import org.example.*
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
+import kotlin.test.assertFalse
 import kotlin.test.assertTrue
 
 class ListExtensionTest {
@@ -140,5 +141,29 @@ class ListExtensionTest {
         }
 
         assertTrue { expected.equals(list) }
+    }
+
+    @Test
+    fun `should return true if there exist an even integer in the list`() {
+        val list = BaseNodeList<Int>()
+        list.add(2)
+        list.add(3)
+        list.add(4)
+
+        assertTrue { list.exists{
+            it % 2 == 0
+        } }
+    }
+
+    @Test
+    fun `should return false if there exist no even integer in the list`() {
+        val list = BaseNodeList<Int>()
+        list.add(1)
+        list.add(3)
+        list.add(5)
+
+        assertFalse { list.exists{
+            it % 2 == 0
+        } }
     }
 }
