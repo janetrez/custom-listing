@@ -166,4 +166,28 @@ class ListExtensionTest {
             it % 2 == 0
         } }
     }
+
+    @Test
+    fun `should return false if there exist an even integer in the list`() {
+        val list = BaseNodeList<Int>()
+        list.add(1)
+        list.add(2)
+        list.add(5)
+
+        assertFalse { list.forAll{
+            it % 2 != 0
+        } }
+    }
+
+    @Test
+    fun `should return true if all integers are even in the list`() {
+        val list = BaseNodeList<Int>()
+        list.add(4)
+        list.add(2)
+        list.add(6)
+
+        assertTrue { list.forAll{
+            it % 2 == 0
+        } }
+    }
 }

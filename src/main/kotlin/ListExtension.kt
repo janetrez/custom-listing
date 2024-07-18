@@ -67,3 +67,13 @@ fun <T> BaseNodeList<T>.exists(fn: (T) -> Boolean) : Boolean{
     }
     return false
 }
+
+fun <T> BaseNodeList<T>.forAll(fn: (T) -> Boolean) : Boolean{
+    var temp = this.head
+    while (temp != null) {
+        if (!fn(temp.value))
+            return false
+        temp = temp.next
+    }
+    return true
+}
