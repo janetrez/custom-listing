@@ -92,7 +92,7 @@ class ListExtensionTest {
             a + b
         }
 
-        assertEquals(7,result)
+        assertEquals(7, result)
     }
 
     @Test
@@ -106,11 +106,11 @@ class ListExtensionTest {
         }
         print(result)
 
-        assertEquals("hello world ",result)
+        assertEquals("hello world ", result)
     }
 
     @Test
-    fun `should delete even integers from the list`(){
+    fun `should delete even integers from the list`() {
         val list = BaseNodeList<Int>()
         list.add(2)
         list.add(3)
@@ -119,6 +119,23 @@ class ListExtensionTest {
         expected.add(3)
 
         list.dropWhile {
+            it % 2 == 0
+        }
+
+        assertTrue { expected.equals(list) }
+    }
+
+    @Test
+    fun `should get even integers from the list`() {
+        val list = BaseNodeList<Int>()
+        list.add(2)
+        list.add(3)
+        list.add(4)
+        val expected = BaseNodeList<Int>()
+        expected.add(2)
+        expected.add(4)
+
+        list.takeWhile {
             it % 2 == 0
         }
 

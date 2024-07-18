@@ -37,10 +37,31 @@ class NodeListTest {
         list.add(2)
         list.add(3)
         list.add(4)
+        list.add(5)
+
         val expected = BaseNodeList<Int>()
-        expected.add(2)
+        expected.add(4)
+        expected.add(5)
 
         list.drop(2)
+
+        assertTrue { expected.equals(list) }
+    }
+
+    @Test
+    fun `should get n integers from the list`(){
+        val list = BaseNodeList<Int>()
+        list.add(2)
+        list.add(3)
+        list.add(4)
+        list.add(5)
+
+        val expected = BaseNodeList<Int>()
+        expected.add(2)
+        expected.add(3)
+        expected.add(4)
+
+        list.take(3)
 
         assertTrue { expected.equals(list) }
     }

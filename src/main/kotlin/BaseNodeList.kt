@@ -51,8 +51,25 @@ class BaseNodeList<T> {
     fun drop(count : Int){
         if(this.getSize() < count)
             throw Exception("Count greater than list size")
+        var list = this.getList()
         for ( i in 1..count) {
-            this.head = this.head?.next
+            list.head = list.head?.next
+        }
+        list = list.getList()
+        this.head = list.head
+    }
+
+    fun take(count : Int){
+        if(this.getSize() < count)
+            throw Exception("Count greater than list size")
+        var list = this.getList()
+        this.head = null
+        var temp = list.head
+        for ( i in 1..count) {
+            if (temp !=null){
+                this.add(temp.value)
+                temp = temp.next
+            }
         }
     }
 

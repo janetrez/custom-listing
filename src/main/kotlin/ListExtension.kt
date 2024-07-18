@@ -45,3 +45,15 @@ fun <T> BaseNodeList<T>.dropWhile(fn: (T) -> Boolean){
     }
     this.head = result.head
 }
+
+fun <T> BaseNodeList<T>.takeWhile(fn: (T) -> Boolean){
+    val result = BaseNodeList<T>()
+    val list = this.getList()
+    var temp = list.head
+    while (temp != null) {
+        if (fn(temp.value))
+            result.add(temp.value)
+        temp = temp.next
+    }
+    this.head = result.head
+}
